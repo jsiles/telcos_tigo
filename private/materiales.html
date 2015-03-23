@@ -1,0 +1,142 @@
+<html>
+<head>
+<title>siges</title>
+<meta name="GENERATOR" content="Dev-PHP 2.4.0">
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link rel="stylesheet" href="Site.css" type="text/css">
+</head>
+<link href="Themes/Clear/Style.css" type="text/css" rel="stylesheet">
+<body class="PageBODY">
+<p>
+
+<font class="ClearFormHeaderFont">Volver a</font> &gt; <a href="compras.php?{TransitParams}" alt="Compras" title="Compras">Compras&nbsp;</a> <br> <br>
+
+<font class="ClearFormHeaderFont">Lista
+de Materiales </font><br>
+Total de Registros:&nbsp; {th_valoresiniciales_TotalRecords}&nbsp; 
+<table border="0">
+<tr>
+<td>
+ <table>
+  <tr>
+   <td valign="top">
+   <!--BeginFormvaloresGridHeader-->
+   
+   <!--EndFormvaloresGridHeader-->
+   <!--BeginFormvaloresGrid-->
+   <table class="ClearFormTABLE" cellspacing="1" cellpadding="4" border="0">
+     <tr>
+       <td class="ClearColumnTD" nowrap>&nbsp; &nbsp;</td> 
+       <td class="ClearColumnTD" nowrap>&nbsp; &nbsp;</td> 
+       <td class="ClearColumnTD" nowrap><a class="ClearSorterLink" href="{FileName}?{FormParams}FormvaloresGrid_Sorting=1&FormvaloresGrid_Sorted={Form_Sorting}&">Materiales</a></td>
+       <td class="ClearColumnTD" nowrap><a class="ClearSorterLink" href="{FileName}?{FormParams}FormvaloresGrid_Sorting=7&FormvaloresGrid_Sorted={Form_Sorting}&">Estado</a></td>
+     </tr>
+     <!--BeginGrid--> 
+     <!--BeginDListvaloresGrid-->
+     <tr>
+      <td class="ClearAltDataTD"><a href="{mat_id_URLLink}?mat_id={Prmvai_id_mat_id}&{TransitParams}"> {mat_id}</a>&nbsp;</td>
+      <td class="ClearAltDataTD"><a href="{mat_unidad_URLLink}?mat_id={Prmvai_id_mat_id}&{TransitParams}"> {mat_unidad}</a>&nbsp;</td>
+      <td class="ClearAltDataTD">{mat_material}&nbsp;</td>
+      <td class="ClearAltDataTD">{mat_sw}&nbsp;</td>
+     </tr>
+     <!--EndDListvaloresGrid--> 
+     <!--BeginDListvaloresAltGrid-->
+     <tr>
+      <td class="ClearDataTD"><a href="{Alt_mat_id_URLLink}?mat_id={Alt_Prmvai_id_mat_id}&{TransitParams}">{Alt_mat_id}</a>&nbsp;</td>
+      <td class="ClearDataTD"><a href="{Alt_mat_unidad_URLLink}?mat_id={Alt_Prmvai_id_mat_id}&{TransitParams}">{Alt_mat_unidad}</a>&nbsp;</td>
+      <td class="ClearDataTD">{Alt_mat_material}&nbsp;</td>
+      <td class="ClearDataTD">{Alt_mat_sw}&nbsp;</td>
+     </tr>
+     <!--EndDListvaloresAltGrid--> 
+     <!--EndGrid--> 
+
+     <!--BeginvaloresGridNoRecords-->
+     <tr><td colspan="8" class="ClearDataTD">No hay Registros</td></tr>
+     <!--EndvaloresGridNoRecords--> 
+     <tr>
+      <td colspan="8" class="ClearColumnTD" nowrap align="center">
+        <a href="{FormAction}?{TransitParams}">Agregar Nuevo</a>&nbsp;
+        <!--BeginvaloresGridNavigator-->
+        <a href{valoresGridNavigatorFirstPage}="{FileName}?{FormParams}{SortParams}FormvaloresGrid_Page=1#valoresGrid">Inicio</a>
+        <a href{valoresGridNavigatorFirstPage}="{FileName}?{FormParams}{SortParams}FormvaloresGrid_Page={PrevPage}#valoresGrid">Anterior</a>
+        [ {valoresGridCurrentPage} of {valoresGridPageCount} ]
+        <a href{valoresGridNavigatorLastPage}="{FileName}?{FormParams}{SortParams}FormvaloresGrid_Page={NextPage}#valoresGrid">Siguiente</a>
+        <a href{valoresGridNavigatorLastPage}="{FileName}?{FormParams}{SortParams}FormvaloresGrid_Page=last#valoresGrid">Final</a>
+        <!--EndvaloresGridNavigator-->
+      </td>
+     </tr>
+    </table>
+    </td>
+    <td width="15">&nbsp;</td>
+    <td>
+   <!--EndFormvaloresGrid-->
+   
+   <!--BeginFormvaloresRecord-->
+   <form method="Get" action="{FileName}" name="valoresRecord">
+  <font class="ClearFormHeaderFont">Agregar/Editar Materiales&nbsp; </font> 
+  <table class="ClearFormTABLE" cellspacing="1" cellpadding="3" border="1">
+     <!--BeginvaloresRecordErr-->
+     <tr>
+      <td class="ClearErrorDataTD" colspan="2">{svaloresRecordErr}</td>
+     </tr>
+     <!--EndvaloresRecordErr-->
+     <tr>
+      <td class="ClearFieldCaptionTD">Materiales</td>
+      <td class="ClearDataTD"><input type="text" name="mat_material" value="{mat_material}" size="12"></td>
+     </tr>
+     <tr>
+      <td class="ClearFieldCaptionTD">Estado</td>
+      <td class="ClearDataTD"><select name="mat_sw"><!--BeginvaloresRecordLBvai_sw--><option value="{ID}" {Selected}>{Value}</option><!--EndvaloresRecordLBvai_sw--></select></td>
+     </tr>
+     
+     <tr>
+      <td class="ClearFooterTD" nowrap align="right" colspan="2">
+
+      <!-- ***   Buttons   *** -->
+      
+      <!--BeginvaloresRecordInsert-->
+      <input type="hidden" value="insert" name="FormAction">
+      <input class="ClearButton" type="submit" value="Agregar" onClick="document.valoresRecord.FormAction.value = 'insert';">
+      <!--EndvaloresRecordInsert-->
+      
+      <!--BeginvaloresRecordEdit-->
+      <input type="hidden" value="update" name="FormAction"/>
+      
+      <!--BeginvaloresRecordUpdate-->
+      <input class="ClearButton" type="submit" value="Enviar" onClick="document.valoresRecord.FormAction.value = 'update';"/>
+      <!--EndvaloresRecordUpdate-->
+      
+      <!--BeginvaloresRecordDelete-->
+      <input class="ClearButton" type="submit" value="Borrar" onClick="document.valoresRecord.FormAction.value = 'delete';"/>
+      <!--EndvaloresRecordDelete-->
+      
+      <!--EndvaloresRecordEdit-->
+      
+      <!--BeginvaloresRecordCancel-->
+      <input class="ClearButton" type="submit" value="Cancelar" onClick="document.valoresRecord.FormAction.value = 'cancel';"/>
+      <!--EndvaloresRecordCancel-->
+      
+      <input type="hidden" name="FormName" value="valoresRecord"/>
+      <input type="hidden" name="FormvaloresGrid_Page" value="{FormvaloresGrid_Page}"/> 
+      <input type="hidden" name="jue_id" value="{jue_id}"/>
+      <input type="hidden" name="PK_mat_id" value="{PK_mat_id}"/>
+      
+     </td>
+    </tr>
+
+   </table>
+  </form>
+<!--EndFormvaloresRecord-->
+   </td>
+  </tr>
+ </table>
+ </td></tr>
+</table>
+
+{Footer}
+
+</body>
+</html>
