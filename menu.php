@@ -7,7 +7,6 @@
  */
 include ("./common.php");
 //include ("./header.php");
-
 global    $periodo,$rel_id;
 session_start();
 check_security(1);
@@ -258,7 +257,7 @@ function elementos_show()
 
 
               $tpl->set_var("Detail_Src", "reporte2.php?id=$jue_id&dat_periodo=$dat_periodo&apl=1");
-              $tpl->set_var("ele_nombre","INDICADORES DE GESTION");
+              $tpl->set_var("ele_nombre","INDICADORES DE GESTIÓN");
               $tpl->parse("Row",true);
 
 

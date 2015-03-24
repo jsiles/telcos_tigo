@@ -1,5 +1,6 @@
 <?php
 error_reporting (E_ALL ^ E_NOTICE);
+ini_set('default_charset','iso-8859-1');
 include("./template.php");
 include("./db_mysql.inc");
 define("DATABASE_NAME","devzone_tigo");

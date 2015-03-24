@@ -11,17 +11,18 @@
 		$admin = get_param("PHPsession");
 
 		if ($admin=='1q2w3e4r5t6y') {
-		session_unregister("cliID");
-        session_unregister("UserLogin");
-        session_unregister("GroupID");
-        header("Location: ./private/index.php");
+	    unset($_SESSION["cliID"]);
+        unset($_SESSION["UserLogin"]);
+        unset($_SESSION["GroupID"]);
+	    header("Location: ./private/index.php");
         //exit;
         }
 		else
 		{
-		session_unregister("cliID");
-		session_unregister("UserRights");
-		header("Location: index.php");
+		unset($_SESSION["cliID"]);
+        unset($_SESSION["UserLogin"]);
+        unset($_SESSION["GroupID"]);
+	    header("Location: index.php");
 		exit;
 		}
 

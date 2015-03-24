@@ -1,5 +1,6 @@
 <?php
 
+ini_set('default_charset','iso-8859-1');
 //Include Files @0-6CA7C540
 include(RelativePath . "/Classes.php");
 include(RelativePath . "/db_mysql.php");
